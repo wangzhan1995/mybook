@@ -1,32 +1,55 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <el-container>
+      <!-- 顶部导航栏 -->
+      <div class="topbar">
+
+      </div>
+      <!-- 顶部导航栏END -->
+
+      <!-- 顶栏容器 -->
+      <el-header>
+
+      </el-header>
+      <!-- 顶栏容器END -->
+
+
+      <!-- 主要区域容器 -->
+      <el-main>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </el-main>
+      <!-- 主要区域容器END -->
+
+      <!-- 底栏容器 -->
+      <el-footer>
+
+      </el-footer>
+      <!-- 底栏容器END -->
+    </el-container>
   </div>
 </template>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  body{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
   }
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  .el-main{
+    padding: 0!important;
+  }
+  .el-header{
+    padding: 0;
+  }
+
 </style>
